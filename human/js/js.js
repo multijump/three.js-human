@@ -77,7 +77,7 @@ function init() {
 
 	var texture = new THREE.Texture();
 	var loader = new THREE.ImageLoader( manager );
-	loader.load( './objects/d026_NM.jpg', function ( image ) {
+	loader.load( './human/objects/d026_NM.jpg', function ( image ) {
 
 		texture.image = image;
 		texture.needsUpdate = true;
@@ -85,7 +85,7 @@ function init() {
 	} );
 
 	var clothe_loader = new THREE.OBJLoader(manager);
-	clothe_loader.load( './objects/female_dress.obj', function ( object ) {
+	clothe_loader.load( './human/objects/female_dress.obj', function ( object ) {
 		clothe1 = object;
 		object.traverse( function ( child ) {
 
