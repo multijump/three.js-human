@@ -39,7 +39,7 @@ function init() {
 	// ASCII file
 
 	var loader = new THREE.STLLoader();
-	loader.load( './objects/human_b.stl', function ( geometry ) {
+	loader.load( './human/objects/human_b.stl', function ( geometry ) {
 
 		var material = new THREE.MeshPhongMaterial( { color: 0xff5533, specular: 0x111111, shininess: 200 } );
 		mesh = new THREE.Mesh( geometry, material );
@@ -77,7 +77,7 @@ function init() {
 
 	var texture = new THREE.Texture();
 	var loader = new THREE.ImageLoader( manager );
-	loader.load( './objects/d026_NM.jpg', function ( image ) {
+	loader.load( './human/objects/d026_NM.jpg', function ( image ) {
 
 		texture.image = image;
 		texture.needsUpdate = true;
@@ -85,7 +85,7 @@ function init() {
 	} );
 
 	var clothe_loader = new THREE.OBJLoader(manager);
-	clothe_loader.load( './objects/female_dress.obj', function ( object ) {
+	clothe_loader.load( './human/objects/female_dress.obj', function ( object ) {
 		clothe1 = object;
 		object.traverse( function ( child ) {
 
@@ -126,7 +126,7 @@ function init() {
 
 	texture = new THREE.Texture();
 	loader = new THREE.ImageLoader( manager2 );
-	loader.load( './objects/d025.jpg', function ( image ) {
+	loader.load( './human/objects/d025.jpg', function ( image ) {
 
 		texture.image = image;
 		texture.needsUpdate = true;
@@ -134,7 +134,7 @@ function init() {
 	} );
 
 	clothe_loader = new THREE.OBJLoader(manager2);
-	clothe_loader.load( './objects/dress25.obj', function ( object ) {
+	clothe_loader.load( './human/objects/dress25.obj', function ( object ) {
 		clothe2 = object;
 		object.traverse( function ( child ) {
 
